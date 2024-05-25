@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>畜牧业农产品平台</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="content">
+    <div class="content-middle">
+        <h2 class="subtitle">目标客群</h2>
+        <ul class="tabtitle">
+            <li class="topradius3"><a href="mydetail2.html" target="proTab" class="topradius3 proTab">运动健身人群</a></li>
+            <li class="tabtitle-link-box"></li>
+            <li class="topradius3"><a href="mydetail2.html" target="proTab" class="topradius3 proTab">糖尿病等控糖人群</a></li>
+            <li class="tabtitle-link-box"></li>
+            <li class="topradius3"><a href="mydetail2.html" target="proTab" class="topradius3 proTab">其他</a></li>
+        </ul>
+
+        <div id="mydetail">
+            <iframe src="mydetail2.html" id="proTab" name="proTab" width="100%" height="1330" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="charts/dist/echarts.js"></script>
+<script>
+$(document).ready(function() {
+    $('.proTab').each(function(i){
+        $(this).click(function(){
+            $('.proTab').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+
+});
+</script>
+</html>

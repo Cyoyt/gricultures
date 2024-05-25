@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>畜牧业农产品平台</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<header class="iframe-header">
+	<h1 class="fl"><img src="images/源头1.jpg" width="45" height="45" class="fl">畜牧业农产品平台</h1>
+</header>
+<div class="iframe-content">
+	<div class="fl iframe-menu">
+		<ul class="iframe-menu-option">
+			<a href="main.html" target="main"><li class="btn-blue"><i class="icon icon1"></i>首页（农产品）</li></a>
+			<a href="yuantou.html" target="main"><li><i class="icon icon2"></i>生产源头</li></a>
+			<a href="目标客群.html" target="main"><li><i class="icon icon3"></i>目标客群</li></a>
+			<a href="产品口味.html" target="main"><li><i class="icon icon4"></i>产品口味</li></a>
+			<a href="延伸产品.html" target="main"><li><i class="icon icon5"></i>延伸产品</li></a>
+			<a href="驿站联络.html" target="main"><li><i class="icon icon5"></i>驿站联络</li></a>
+			<a href="合作网站.html" target="main"><li><i class="icon icon7"></i>合作网站</li></a>
+			<a href="合作意向书.html" target="main"><li><i class="icon icon6"></i>合作意向书</li></a>
+			<a href="客服.html" target="main"><li><i class="icon icon6"></i>客服</li></a>
+			<a href="调查问卷.html" target="main"><li><i class="icon icon6"></i>调查问卷</li></a>
+		</ul>
+	</div>
+	<div class="fl iframe-right-content">
+		<iframe src="main.html" id="main" name="main"></iframe>
+	</div>
+</div>	
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+    	setIframeSize();
+    	$('.iframe-menu-option li').each(function(){
+    		$(this).click(function(){
+    			$('.iframe-menu-option li').removeClass('btn-blue');
+    			$(this).addClass('btn-blue');
+    		});
+    	});
+
+    });
+    function setIframeSize()
+    {
+    	var wHeight=$(document).height();
+    	var rHeight=wHeight-60;
+    	$(".iframe-right-content").height(rHeight);
+    	$(".iframe-right-content").width($(".iframe-right-content").width()-1);
+    }
+
+
+</script>
+</html>
